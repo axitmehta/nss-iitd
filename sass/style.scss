@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import "compass";
+@import "partials/variable";
+@import "partials/normalize";
+@font-face {
+  font-family:"Input Mono Narrow";
+  src: url('../fonts/input_mono_narrow.woff') format('woff');
+}
+@font-face {
+  font-family: "Input Mono Bold";
+  src: url('../fonts/input_mono_bold.woff') format('woff');
+}
+@font-face {
+  font-family: "Input Mono Narrow Bold";
+  src: url('../fonts/input_mono_narrow_bold.woff') format('woff');
+}
+body{
+  font-family: $ubuntu;
+  background: #ffffff;
+}
+// container from bootstrap
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: $xs-break) {
+      width: 750px;
+  }
+  @media screen and (min-width: $md-break) {
+    width: 970px;
+  }
+  @media screen and (min-width: $lg-break) {
+    width: 1170px;
+  }
+  @media screen and (min-width: $xl-break) {
+    width: 1400px;
+  }
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row-nav{
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  background: rgba(255,255,255,1);
+  border-bottom: 1px solid #E0E0E0;
+  // box-shadow: 0 2px 20px 0 rgba(128, 128, 128, 0.5);
+  // position: fixed;
+  top: 0;
+  z-index: 10;
+  .wrapper{
+    height: 100%;
+  }
+  .btn-primary.btn-color {
+    color: $btn-color;
+    background: $white;
+  }
+  .nav-li-items{
+    ul li{
+      display: inline-block;
+      margin: auto 1.4rem;
+      a{
+        color: #42526E;
+        font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42857142857143;
+        letter-spacing: -.005em;
+        cursor: pointer;
+        position: relative;
+        // text-transform: uppercase;
+        text-decoration: none;
+        transition: color .3s ease;
+        // text-shadow: 2px 2px 1px rgba(0,0,0,.08);
+        &:hover{
+          @include transition(all 0.3s ease-in-out);
+          color: #0052CC;
+          opacity:1;
+        }
+      }
+    }
+  }
+}
+
+.ngview{
+  position: relative;
+  top: 4rem;
+  background: #ffffff;
+}
+
+footer{
+  background: #fff;
+  color: $white;
+  position: relative;
+  .container{
+    padding: 3rem;
+  }
+  ul {
+    padding: 0;
+      li {
+      display: inline-block;
+      margin: auto 1rem;
+      text-align: left;
+      list-style: none;
+      margin: 0;
+      a{
+        color: #859196 ;
+        font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.62857142857143;
+        letter-spacing: -.005em;
+        cursor: pointer;
+        position: relative;
+        // text-transform: uppercase;
+        text-decoration: none;
+        transition: color .3s ease;
+        // text-shadow: 2px 2px 1px rgba(0,0,0,.08);
+        &:hover{
+          @include transition(all 0.3s ease-in-out);
+          color: #0052CC;
+          opacity:1;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// home.html starts from here
+.section2{
+  height: 100vh;
+  .text-wrapper{
+    height: 100%;
+    width: 100%;
+    p{
+      font-size: 20px;
+      line-height: 30px;
+      color: #535863;
+      font-weight: 300;
+      text-align: center;
+      max-width: 800px;
+      font-family: $open-sans;
+    }
+  }
+}
+
+// aboutus.html starts from here
+.cust-container {
+   height: auto;
+   overflow: hidden;
+   .left {
+     width: 240px;
+     float: left;
+     height: 100vh;
+     position: fixed;
+     background: #F4F5F7;
+     ul{
+       padding: 0 8px;
+       li{
+          border-radius: 3px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          height: 40px;
+          position: relative;
+          text-overflow: ellipsis;
+          width: 100%;
+          a{
+            border-radius: 3px;
+            display: block;
+            height: 100%;
+            position: relative;
+            text-decoration: none;
+            color: #42526E;
+            div{
+              height: 100%;
+            }
+            &:hover, &:active{
+              background: rgba(9, 30, 66, 0.04);
+              color: #0052CC;
+            }
+            i{
+              font-size: 16px;
+            }
+            .ti-direction-alt{
+              font-size: 19px;
+            }
+          }
+       }
+     }
+   }
+   .right {
+     float: none; /* not needed, just for clarification */
+    //  background: #e8f6fe;
+    background: white;
+     position: relative;
+     left:240px;
+     /* the next props are meant to keep this block independent from the other floated one */
+     width:calc(100% - 240px);
+     overflow: hidden;
+     .wrapper{
+       padding: 2rem 3rem;
+       h3{
+         color: #34383a;
+         font-size: 1.3rem;
+         margin-top: 3rem;
+         &:nth-child(1){
+           margin-top: 2rem;
+         }
+       }
+       h4{
+         color: #34383a;
+         font-size: 1rem;
+       }
+       p{
+         font-family: $varela;
+         color: #576366;
+         font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+       }
+     }
+   }
+}
+.list-wrapper{
+}
+.section3{
+  height: 400px;
+  width: 100%;
+  div{
+    height: 100%;
+  }
+  background: #D9ECE7;
+  h3{
+    color: #34383a;
+    font-size: 1.7rem;
+    font-weight: 500;
+    max-width:700px;
+    text-align: center;
+  }
+  a{
+    white-space: nowrap;
+    margin: 3rem auto;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    background: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    color: #6772e5;
+    text-decoration: none;
+    transition: all .15s ease;
+    color: #fff;
+    background: #6772e5;
+  }
+}

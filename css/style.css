@@ -1,0 +1,502 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+html {
+  background: #1a1a1a;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Input Mono Narrow";
+  src: url("../fonts/input_mono_narrow.woff") format("woff");
+}
+@font-face {
+  font-family: "Input Mono Bold";
+  src: url("../fonts/input_mono_bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Input Mono Narrow Bold";
+  src: url("../fonts/input_mono_narrow_bold.woff") format("woff");
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: #ffffff;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    width: 750px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .container {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1400px;
+  }
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row-nav {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  background: white;
+  border-bottom: 1px solid #E0E0E0;
+  top: 0;
+  z-index: 10;
+}
+.row-nav .wrapper {
+  height: 100%;
+}
+.row-nav .btn-primary.btn-color {
+  color: #1F8EED;
+  background: #ffffff;
+}
+.row-nav .nav-li-items ul li {
+  display: inline-block;
+  margin: auto 1.4rem;
+}
+.row-nav .nav-li-items ul li a {
+  color: #42526E;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857142857143;
+  letter-spacing: -.005em;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+.row-nav .nav-li-items ul li a:hover {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #0052CC;
+  opacity: 1;
+}
+
+.ngview {
+  position: relative;
+  top: 4rem;
+  background: #ffffff;
+}
+
+footer {
+  background: #fff;
+  color: #ffffff;
+  position: relative;
+}
+footer .container {
+  padding: 3rem;
+}
+footer ul {
+  padding: 0;
+}
+footer ul li {
+  display: inline-block;
+  margin: auto 1rem;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+}
+footer ul li a {
+  color: #859196;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.62857142857143;
+  letter-spacing: -.005em;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+footer ul li a:hover {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #0052CC;
+  opacity: 1;
+}
+
+.section2 {
+  height: 100vh;
+}
+.section2 .text-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.section2 .text-wrapper p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #535863;
+  font-weight: 300;
+  text-align: center;
+  max-width: 800px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.cust-container {
+  height: auto;
+  overflow: hidden;
+}
+.cust-container .left {
+  width: 240px;
+  float: left;
+  height: 100vh;
+  position: fixed;
+  background: #F4F5F7;
+}
+.cust-container .left ul {
+  padding: 0 8px;
+}
+.cust-container .left ul li {
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 40px;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.cust-container .left ul li a {
+  border-radius: 3px;
+  display: block;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: #42526E;
+}
+.cust-container .left ul li a div {
+  height: 100%;
+}
+.cust-container .left ul li a:hover, .cust-container .left ul li a:active {
+  background: rgba(9, 30, 66, 0.04);
+  color: #0052CC;
+}
+.cust-container .left ul li a i {
+  font-size: 16px;
+}
+.cust-container .left ul li a .ti-direction-alt {
+  font-size: 19px;
+}
+.cust-container .right {
+  float: none;
+  /* not needed, just for clarification */
+  background: white;
+  position: relative;
+  left: 240px;
+  /* the next props are meant to keep this block independent from the other floated one */
+  width: calc(100% - 240px);
+  overflow: hidden;
+}
+.cust-container .right .wrapper {
+  padding: 2rem 3rem;
+}
+.cust-container .right .wrapper h3 {
+  color: #34383a;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+}
+.cust-container .right .wrapper h3:nth-child(1) {
+  margin-top: 2rem;
+}
+.cust-container .right .wrapper h4 {
+  color: #34383a;
+  font-size: 1rem;
+}
+.cust-container .right .wrapper p {
+  font-family: "Varela Round", sans-serif;
+  color: #576366;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.section3 {
+  height: 400px;
+  width: 100%;
+  background: #D9ECE7;
+}
+.section3 div {
+  height: 100%;
+}
+.section3 h3 {
+  color: #34383a;
+  font-size: 1.7rem;
+  font-weight: 500;
+  max-width: 700px;
+  text-align: center;
+}
+.section3 a {
+  white-space: nowrap;
+  margin: 3rem auto;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #6772e5;
+  text-decoration: none;
+  transition: all .15s ease;
+  color: #fff;
+  background: #6772e5;
+}
