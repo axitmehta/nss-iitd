@@ -1,120 +1,20 @@
 <div class="collab ngo">
-  <div class="container" layout-wrap layout="row" layout-aling="center center">
-    <md-card class="card">
-      <div layout="row">
-        <div class="left">
-          <img src="images/download.jpg"/>
-          <div class="text-wrapper" layout="column">
-            <!-- <h3>National Association of Blind</h3> -->
-            <div layout="column" layout-align="center center">
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-marker-alt"></i> Aply For NGO
-              </a>
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-map-alt"></i> Direction
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="text-wrapper" layout="column">
-            <h3>National Association of Blind</h3>
-            <div>
-              <p>The objective of NAB is to educate and impart life skills to the visually impaired children so that they can self-reliant and contributing members of the society. Six to eight volunteers will be required each week to teach kids and to edit books. Volunteers also help them as scribes and in voice recording. "The only thing worse than being blind is having sight but no vision."</p>
-              <ul>Type of work:
-                <li>Teaching one-on-one (mostly at higher secondary level)</li>
-                <li>Book Editing</li>
-              </ul>
-              <p>Six to eight volunteers are required each week, including the work of book editing .Volunteers are being sent regularly . Besides the above activities, they also help them in conducting their workshops, field surveys and filling up forms from time to time. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </md-card>
-
-    <md-card class="card">
-      <div layout="row">
-        <div class="left">
-          <img src="images/dnip1.jpg"/>
-          <div class="text-wrapper" layout="column">
-            <!-- <h3>National Association of Blind</h3> -->
-            <div layout="column" layout-align="center center">
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-marker-alt"></i> Aply For NGO
-              </a>
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-map-alt"></i> Direction
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="text-wrapper" layout="column">
-            <h3>DNIP CARE</h3>
-            <div>
-              <p>DNip-Care <a href="www.dnipcare.org">(www.dnipcare.org)</a> is an NGO dedicated to improving the quality of life of long-term, terminally ill, bedridden patients, mostly cancer patients. Volunteers generally go every weekend to visit these patients at their homes; or in a hospital, and try to spend some time with them as their well-wishers/ friends. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </md-card>
-
-    <md-card class="card">
-      <div layout="row">
-        <div class="left">
-          <img src="images/apna1.jpg"/>
-          <div class="text-wrapper" layout="column">
-            <!-- <h3>National Association of Blind</h3> -->
-            <div layout="column" layout-align="center center">
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-marker-alt"></i> Aply For NGO
-              </a>
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-map-alt"></i> Direction
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="text-wrapper" layout="column">
-            <h3>APPNA PARIVAR CHILDREN’S HOME</h3>
-            <div>
-              <p>
-                Imagine a childhood without TV, candies and toys. Strange, isn’t it? Would you like to be the ray of brightness in lives of some less fortunate children, by devoting some time of your lives to them?
-                <br>
-                <br>
-                About Appna Parivar Children Home: A shelter to children aged between 6 and 12, the home has been started by Mr. Babu Rao. The children involve themselves in games mostly apart from studies. Appna Parivar Children Home is located in Chhatarpur.
-                <br>
-                <br>
-                Volunteering: Volunteers will be required to visit the home and engage the kids in fun filled activities through which the children learn. Volunteers are required to go during the weekends for around 4 hours per day.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </md-card>
-
-    <md-card class="card">
-      <div layout="row">
-        <div class="left">
-          <img src="images/old1.jpg"/>
-          <div class="text-wrapper" layout="column">
-            <!-- <h3>National Association of Blind</h3> -->
-            <div layout="column" layout-align="center center">
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-marker-alt"></i> Aply For NGO
-              </a>
-              <a class="custom-btn" aria-label="More">
-                <i class="ti-map-alt"></i> Direction
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="text-wrapper" layout="column">
-            <h3>RANA SENIOR CITIZEN HOME</h3>
-            <div ng-bind-html="heyas">
-            </div>
+  <div class="container" layout-wrap layout="row" layout-align="center center">
+    <md-card class="card" ng-repeat="ngo in collabrationNGOs">
+      <div layout="column">
+        <img src="images/download.jpg"/>
+        <div class="text-wrapper" layout="column">
+          <h3>{{ngo.name}}</h3>
+          <div layout="row" layout-align="center center">
+            <md-button class="md-icon-button" aria-label="More" ng-click="expandDetail(ngo, $envent)">
+              <i class="ti-info-alt"></i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More">
+              <i class="ti-marker-alt"></i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More">
+              <i class="ti-map-alt"></i>
+            </md-button>
           </div>
         </div>
       </div>

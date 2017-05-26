@@ -24,7 +24,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
     controller: "MainCtrl",
     templateUrl: "templates/aboutus.html"
   }).when("/collabrationNGO", {
-    controller: "MainCtrl",
+    controller: "CollabCtrl",
     templateUrl: "templates/ngo.html"
   }).when("/internship", {
     controller: "MainCtrl",

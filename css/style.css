@@ -535,7 +535,8 @@ footer ul li a:hover {
   margin-top: 3rem;
 }
 .collab.ngo .card {
-  width: 100%;
+  width: 300px;
+  height: 370px;
   border: 1px solid #E0E0E0;
 }
 .collab.ngo .card .left {
@@ -563,14 +564,6 @@ footer ul li a:hover {
 .collab.ngo .card .text-wrapper i {
   font-size: 24px;
   position: relative;
-  top: 5px;
-}
-.collab.ngo .card .text-wrapper p, .collab.ngo .card .text-wrapper ul, .collab.ngo .card .text-wrapper li {
-  font-family: "Varela Round", sans-serif;
-  color: #576366;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
 }
 
 .internship h1 {
@@ -580,22 +573,30 @@ footer ul li a:hover {
 .internship .text-wrapper {
   width: 100%;
 }
-.internship ul {
+
+.ngo_details {
+  height: 70%;
+  width: 600px;
+  background: white;
+}
+.ngo_details .text-wrapper {
+  padding: 16px;
+}
+.ngo_details p {
+  font-family: "Varela Round", sans-serif;
+  color: #576366;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.ngo_details ul {
   padding: 0;
 }
-.internship ul li {
+.ngo_details ul li {
   font-weight: 400;
   font-size: 17px;
-  line-height: 26px;
   color: #32325d;
-  margin: 1rem 1rem;
+  margin: .3rem 1rem;
   text-align: left;
   list-style-type: circle;
-}
-.internship ul li ul li {
-  list-style-type: square;
-  margin: 0rem 1rem;
-}
-.internship ul li b {
-  color: #32325d;
 }
