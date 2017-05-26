@@ -18,6 +18,13 @@ body{
   font-family: $ubuntu;
   background: #ffffff;
 }
+h3{
+  color: #34383a;
+  font-size: 1.7rem;
+  font-weight: 500;
+  max-width:700px;
+  text-align: center;
+}
 // container from bootstrap
 .container {
   margin-right: auto;
@@ -99,6 +106,7 @@ footer{
   background: #fff;
   color: $white;
   position: relative;
+  top: 4rem;
   .container{
     padding: 3rem;
   }
@@ -267,5 +275,106 @@ footer{
     transition: all .15s ease;
     color: #fff;
     background: #6772e5;
+  }
+}
+
+.custom-btn{
+  white-space: nowrap;
+  margin: 1rem auto;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #6772e5;
+  text-decoration: none;
+  transition: all .15s ease;
+  color: #fff;
+  background: #6772e5;
+}
+
+
+// ngo.html starts from here
+.collab.ngo{
+  .container{
+    margin-top: 3rem;
+  }
+  .card{
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    .left{
+      max-width: 300px;
+      a{
+        font-weight: 400;
+      }
+    }
+    .right{
+      h3{
+        color:  #0052CC;
+        text-align: center;
+      }
+    }
+    img{
+      width: 300px;
+      height: auto;
+    }
+    .text-wrapper{
+      padding: 16px 16px 16px 24px;
+      h3{
+        margin: 1rem;
+        font-size: 1.4rem;
+      }
+      i{
+        font-size: 24px;
+        position: relative;
+        top: 5px;
+      }
+      p, ul ,li{
+        font-family:$varela;
+        color: #576366;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      md-button{}
+      margin: 0 12px;
+    }
+  }
+}
+
+.internship{
+  h1{
+    font-weight: 500;
+    text-align: center;
+  }
+  .text-wrapper{
+    width: 100%;
+  }
+  ul {
+    padding: 0;
+    li {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 26px;
+      color: #32325d;
+    // display: inline-block;
+      margin: 1rem 1rem;
+      text-align: left;
+      list-style-type:circle;
+      ul li{
+        list-style-type:square;
+        margin: 0rem 1rem;
+      }
+      b{
+        color: #32325d;
+      }
+      // margin: 0;
+    }
   }
 }

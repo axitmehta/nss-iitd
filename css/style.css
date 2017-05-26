@@ -249,6 +249,14 @@ body {
   background: #ffffff;
 }
 
+h3 {
+  color: #34383a;
+  font-size: 1.7rem;
+  font-weight: 500;
+  max-width: 700px;
+  text-align: center;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -335,6 +343,7 @@ footer {
   background: #fff;
   color: #ffffff;
   position: relative;
+  top: 4rem;
 }
 footer .container {
   padding: 3rem;
@@ -499,4 +508,94 @@ footer ul li a:hover {
   transition: all .15s ease;
   color: #fff;
   background: #6772e5;
+}
+
+.custom-btn {
+  white-space: nowrap;
+  margin: 1rem auto;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #6772e5;
+  text-decoration: none;
+  transition: all .15s ease;
+  color: #fff;
+  background: #6772e5;
+}
+
+.collab.ngo .container {
+  margin-top: 3rem;
+}
+.collab.ngo .card {
+  width: 100%;
+  border: 1px solid #E0E0E0;
+}
+.collab.ngo .card .left {
+  max-width: 300px;
+}
+.collab.ngo .card .left a {
+  font-weight: 400;
+}
+.collab.ngo .card .right h3 {
+  color: #0052CC;
+  text-align: center;
+}
+.collab.ngo .card img {
+  width: 300px;
+  height: auto;
+}
+.collab.ngo .card .text-wrapper {
+  padding: 16px 16px 16px 24px;
+  margin: 0 12px;
+}
+.collab.ngo .card .text-wrapper h3 {
+  margin: 1rem;
+  font-size: 1.4rem;
+}
+.collab.ngo .card .text-wrapper i {
+  font-size: 24px;
+  position: relative;
+  top: 5px;
+}
+.collab.ngo .card .text-wrapper p, .collab.ngo .card .text-wrapper ul, .collab.ngo .card .text-wrapper li {
+  font-family: "Varela Round", sans-serif;
+  color: #576366;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.internship h1 {
+  font-weight: 500;
+  text-align: center;
+}
+.internship .text-wrapper {
+  width: 100%;
+}
+.internship ul {
+  padding: 0;
+}
+.internship ul li {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  color: #32325d;
+  margin: 1rem 1rem;
+  text-align: left;
+  list-style-type: circle;
+}
+.internship ul li ul li {
+  list-style-type: square;
+  margin: 0rem 1rem;
+}
+.internship ul li b {
+  color: #32325d;
 }

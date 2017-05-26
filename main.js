@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['ngMaterial','ngAnimate','ngRoute','ngMessages']);
+var app = angular.module('app', ['ngMaterial','ngAnimate','ngRoute','ngMessages','ngSanitize']);
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
   .primaryPalette('teal', {
@@ -23,6 +23,12 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
   }).when("/aboutus", {
     controller: "MainCtrl",
     templateUrl: "templates/aboutus.html"
+  }).when("/collabrationNGO", {
+    controller: "MainCtrl",
+    templateUrl: "templates/ngo.html"
+  }).when("/internship", {
+    controller: "MainCtrl",
+    templateUrl: "templates/internship.html"
   }).otherwise({
     controller: "MainCtrl",
     templateUrl: "templates/error.html"
