@@ -29,6 +29,15 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
   }).when("/internship", {
     controller: "MainCtrl",
     templateUrl: "templates/internship.html"
+  }).when("/downloadAPP", {
+    controller: "MainCtrl",
+    templateUrl: "templates/download.app.html"
+  }).when("/downloadREPORT", {
+    controller: "MainCtrl",
+    templateUrl: "templates/download.report.html"
+  }).when("/team_current", {
+    controller: "TeamCtrl",
+    templateUrl: "templates/team.current.html"
   }).otherwise({
     controller: "MainCtrl",
     templateUrl: "templates/error.html"
