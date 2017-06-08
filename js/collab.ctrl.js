@@ -14,7 +14,7 @@ app.controller('CollabCtrl', function($scope, $location, $mdDialog, $mdToast, $r
         };
       },
       controllerAs: 'infomodal',
-      templateUrl: 'templates/ngo.details.html',
+      templateUrl: 'templates/about.collabs.details.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,

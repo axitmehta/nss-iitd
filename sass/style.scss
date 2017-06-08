@@ -30,6 +30,10 @@ h3{
   max-width:700px;
   text-align: center;
 }
+*, a, a:focus, a:active, a:visited{
+  outline: none;
+  border: 0;
+}
 // container from bootstrap
 .container {
   margin-right: auto;
@@ -100,7 +104,40 @@ h3{
     }
   }
 }
+a.sublink{
+  color: #42526E;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857142857143;
+  padding: 6px;
+  letter-spacing: -.005em;
+  cursor: pointer;
+  position: relative;
+  // text-transform: uppercase;
+  text-decoration: none;
+  transition: color .3s ease;
+  // text-shadow: 2px 2px 1px rgba(0,0,0,.08);
+  &:hover{
+    @include transition(all 0.3s ease-in-out);
+    color: #0052CC;
+    opacity:1;
+  }
+}
+.md-open-menu-container.md-active{
+  box-shadow: none;
+  width: 100px;
 
+}
+md-menu-content{
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  top: 60px;
+  padding: 8px;
+  border-radius: 4px;
+}
 .ngview{
   position: relative;
   top: 4rem;
@@ -224,6 +261,7 @@ footer{
      .wrapper{
        padding: 2rem 3rem;
        h3{
+         text-align: left;
          color: #34383a;
          font-size: 1.3rem;
          margin-top: 3rem;
@@ -304,7 +342,10 @@ footer{
   background: #6772e5;
 }
 
-
+.section4{
+  height: 100vh;
+  width: 100%;
+}
 // ngo.html starts from here
 .collab.ngo{
   .container{
@@ -355,7 +396,11 @@ footer{
   .text-wrapper{
     width: 100%;
   }
-
+  font-family: $varela;
+  color: #576366;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 
@@ -588,5 +633,100 @@ footer{
     box-sizing: border-box;
     transform-origin: top center;
     transform: scale(0.8);
+  }
+}
+
+
+// about.faq starts from here
+.about.faq{
+  h1{
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  h2{
+    text-align: left;
+    color: #34383a;
+    font-size: 1.05rem;
+  }
+  div{
+    font-family:$varela;
+    color: #576366;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .subheader{
+    // font-size:
+    text-align: center;
+  }
+}
+.md-accordion{
+  // margin: 20px;
+  max-width: 900px;
+  margin: auto;
+  .expandCollapse {
+    width:30px;
+    height:30px;
+    position:relative;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#fff;
+    display:block;
+    margin-top: -2px;
+    margin-left: -2px;
+    overflow:hidden;
+    &:active{
+      border:0px;
+    }
+    &:before, &:after{
+      width:30px;
+      height:30px;
+      display:block;
+      position:absolute;
+      top:0; left:0;
+      line-height:32px;
+      text-align:center;
+      -webkit-transition: .3s all ease-out;
+      transition: .3s all ease-out;
+    }
+    &:before {
+      opacity:1;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      content: "|";
+      margin-top:-3px;
+    }
+    &:after {
+      opacity:1;
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      content: "|";
+      margin-left:-3px;
+    }
+  }
+  .active:before {
+    opacity:1;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-left:3px;
+    margin-top:0px;
+  }
+  .dataContent {
+    background: #F2F2F2;
+    height:0px;
+    overflow:hidden;
+    -webkit-transition: .3s all ease-out;
+    transition: .3s all ease-out;
+  }
+  .activeContent {
+    height:auto;
+    padding:20px;
+    display:block;
+  }
+  .toolbar{
+    cursor:pointer;
+    padding: 16px;
+    border-bottom:1px solid #D4D4D4;
   }
 }

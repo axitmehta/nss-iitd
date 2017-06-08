@@ -16,18 +16,95 @@
         <!-- <div flex-gt-sm="20" flex="100" class="logo-wrapper" layout="row" layout-align-sm="center center" layout-align-xs="center center">
 
         </div> -->
-        <div flex="100" hide-sm hide-xs layout="row" layout-align="end center" class="nav-li-items">
+        <div flex="100" hide-sm hide-xs layout="row" layout-align="center center" class="nav-li-items">
           <ul>
-            <li><a href="#!/section2">Home</a></li>
-            <li><a href="#section7">Calendar</a></li>
-            <li><a href="#!/aboutus">About Us</a></li>
-            <li><a href="#section7">Collabration</a></li>
-            <li><a href="#!/section2">Get Involved</a></li>
-            <li><a href="#section7">Download</a></li>
-            <li><a href="#!/section2">Blog</a></li>
-            <li><a href="#section7">Hours</a></li>
-            <li><a href="#!/section2">Subscribe</a></li>
-            <li><a href="#section7">Contact Us</a></li>
+            <li><a href="#!/">Home</a></li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">About Us</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/about_nss">About NSS IITD</a>
+                     <a class="sublink" href="#!/about_domains">Domains</a>
+                     <a class="sublink" href="#!/about_collabs">Collaborations</a>
+                     <a class="sublink" href="#!/faq">FAQ's</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">Get Involved</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/involve_volunteering">Regular Volunteering</a>
+                     <a class="sublink" href="#!/involve_events">Events</a>
+                     <a class="sublink" href="#!/involve_internship">Internship</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">Hours</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/visitor">Check hours</a>
+                     <a class="sublink" href="#!/pending_hours">Pending hours</a>
+                     <a class="sublink" href="#!/hours_complaint">Hours Complaint</a>
+                     <a class="sublink" href="#!/hours_policy">Policy</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">Downloads</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/download_magazine">Magazine</a>
+                     <a class="sublink" href="#!/download_report">Semester reports</a>
+                     <a class="sublink" href="#!/download_app">App</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">Connect</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/visitor">Google Subscribe</a>
+                     <a class="sublink" href="#!/project">Facebook Subscribe</a>
+                     <a class="sublink" href="#!/professionals">Blog</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">The team</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/team_current">Current Team</a>
+                     <a class="sublink" href="#!/team_previous">Team 2016-17</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
+            <li><a href="#section7">Gallery</a></li>
+            <li>
+              <md-menu>
+                <a href="#!/aboutus" ng-mouseenter="$mdMenu.open()">Contact Us</a>
+                 <md-menu-content style = "min-height:130px" width="3" ng-mouseleave="$mdMenu.close()">
+                   <md-menu-item layout="column">
+                     <a class="sublink" href="#!/visitor">Contact Details</a>
+                     <a class="sublink" href="#!/project">NSS Directory </a>
+                     <a class="sublink" href="#!/project">Feedback/ complaints</a>
+                   </md-menu-item>
+                 </md-menu-content>
+               </md-menu>
+            </li>
           </ul>
         </div>
       </div>
