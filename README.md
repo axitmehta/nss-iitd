@@ -7,9 +7,9 @@
 * Git
 * Text editor (atom recommended)
 
-###To set up the project###
+### To set up the project ###
 
-####Note: Node.js is required. So install node.js first (https://nodejs.org/en/download/).####
+#### Note: Node.js is required. So install node.js first (https://nodejs.org/en/download/).####
 
 ```
 $ sudo apt-get install nodejs
@@ -38,6 +38,23 @@ $ npm install bower
 $ npm install gulp
 $ npm install
 $ bower install
+```
+
+If you want to use Sass for the builds,
+
+1. install ruby on your machine.
+
+```
+sudo apt-get install ruby-full
+ruby -v
+```
+
+2. Install Sass, compass and any dependencies.
+
+```
+sudo su -c "gem install sass"
+sudo su -c "gem install compass"
+
 ```
 
 
