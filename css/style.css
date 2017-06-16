@@ -367,17 +367,10 @@ a.sublink:hover {
   opacity: 1;
 }
 
-.md-open-menu-container.md-active {
-  box-shadow: none;
-  width: 100px;
-}
-
 md-menu-content {
   overflow: hidden;
   position: relative;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  top: 60px;
-  padding: 8px;
   border-radius: 4px;
 }
 
@@ -588,36 +581,13 @@ footer ul li a:hover {
 .collab.ngo .container {
   margin-top: 3rem;
 }
-.collab.ngo .card {
-  width: 300px;
-  height: 370px;
-  border: 1px solid #E0E0E0;
-}
-.collab.ngo .card .left {
-  max-width: 300px;
-}
-.collab.ngo .card .left a {
-  font-weight: 400;
-}
-.collab.ngo .card .right h3 {
-  color: #0052CC;
+.collab.ngo .md-headline {
+  color: #4D4E52;
+  font-size: 1.2rem;
   text-align: center;
-}
-.collab.ngo .card img {
-  width: 300px;
-  height: auto;
-}
-.collab.ngo .card .text-wrapper {
-  padding: 16px 16px 16px 24px;
-  margin: 0 12px;
-}
-.collab.ngo .card .text-wrapper h3 {
-  margin: 1rem;
-  font-size: 1.4rem;
-}
-.collab.ngo .card .text-wrapper i {
-  font-size: 24px;
-  position: relative;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Varela Round", sans-serif;
 }
 
 .internship {
@@ -642,6 +612,11 @@ footer ul li a:hover {
 }
 .ngo_details .text-wrapper {
   padding: 16px;
+  color: #576366;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Varela Round", sans-serif;
 }
 .ngo_details p {
   font-family: "Varela Round", sans-serif;

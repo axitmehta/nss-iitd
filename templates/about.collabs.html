@@ -1,6 +1,6 @@
 <div class="collab ngo">
   <div class="container" layout-wrap layout="row" layout-align="center center">
-    <md-card class="card" ng-repeat="ngo in collabrationNGOs">
+    <!-- <md-card class="card" ng-repeat="ngo in collabrationNGOs">
       <div layout="column">
         <img src="images/download.jpg"/>
         <div class="text-wrapper" layout="column">
@@ -18,6 +18,29 @@
           </div>
         </div>
       </div>
-    </md-card>
+    </md-card> -->
+    <div flex-xs flex-gt-xs="33" layout="column" ng-repeat="ngo in collabrationNGOs">
+      <md-card>
+        <img ng-src="images/{{ngo.image}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{ngo.name}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="More" ng-click="expandDetail(ngo, $envent)">
+            <i class="ti-info-alt"></i>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="More">
+            <i class="ti-marker-alt"></i>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="More">
+            <i class="ti-map-alt"></i>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
   </div>
 </div>

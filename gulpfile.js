@@ -31,7 +31,10 @@ gulp.task('build-fonts', function () {
   return gulp.src('fonts/**')
     .pipe(gulp.dest('dist/fonts'));
 });
-
+gulp.task('build-python', function () {
+  return gulp.src('python/**')
+    .pipe(gulp.dest('dist/python'));
+});
 gulp.task('build-templates', function () {
   return gulp.src('templates/*.html')
     .pipe(gulp.dest('dist/templates/'));
@@ -92,12 +95,12 @@ gulp.task('jshint', function() {
 
 // default task
 gulp.task('default', function() {
-  return runSequence('clean', 'build-root','build-templates', 'build-fonts','build-sourcejs', 'jshint', 'build-images', 'build-bower-lib','compass-build',
+  return runSequence('clean', 'build-root','build-templates', 'build-fonts','build-python','build-sourcejs', 'jshint', 'build-images', 'build-bower-lib','compass-build',
     ['watch-js', 'watch-css', 'watch-html','watch-root','compass-watch','connect']
   );
 });
 
 // task to run in production
 gulp.task('build-prod', function() {
-  return runSequence('clean', 'build-root', 'build-sourcejs', 'build-customcss', 'compass-build', 'build-templates', 'build-fonts', 'build-images','build-bower-lib');
+  return runSequence('clean', 'build-root', 'build-sourcejs', 'build-customcss', 'compass-build', 'build-templates', 'build-fonts', 'build-python', 'build-images','build-bower-lib');
 });
