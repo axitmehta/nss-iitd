@@ -421,6 +421,133 @@ footer ul li a:hover {
   opacity: 1;
 }
 
+/*partial/home.html section1 css starts from here*/
+#section1 {
+  height: 100vh;
+  max-height: 700px;
+}
+#section1 .img-carousel {
+  height: 100%;
+}
+#section1 .img-carousel ul {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#section1 .img-carousel ul li {
+  display: inline;
+  width: 100%;
+  overflow: hidden;
+}
+#section1 .img-carousel ul li img {
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.text-over-img {
+  overflow: hidden;
+  position: relative;
+  top: -100%;
+  height: 100%;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.62);
+  color: #f2f2f2;
+}
+.text-over-img h2 {
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+}
+.text-over-img h4 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+  .text-over-img {
+    overflow: hidden;
+    position: relative;
+    top: 0%;
+    height: 100%;
+    background: url(../images/image2.jpg);
+  }
+}
+.text-over-img .head-wrapper {
+  margin: auto;
+}
+
+.v-align {
+  font-size: 28px;
+  line-height: 51px;
+  margin-bottom: 0;
+  margin: 50px;
+}
+
+@media (max-width: 600px) {
+  .text-over-img {
+    overflow: hidden;
+    position: relative;
+    top: -100%;
+    height: 100vh;
+    max-height: 600px;
+    background: url(../images/image2.jpg);
+  }
+
+  .v-align {
+    margin: 0 50px;
+  }
+}
+@-moz-document url-prefix() {
+  .text-over-img {
+    overflow: hidden;
+    position: relative;
+    top: -100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/image2.jpg");
+  }
+}
+@media (max-width: 1440px) {
+  #section1 {
+    width: 100%;
+    height: calc(100vh - 70px);
+    max-height: 610px;
+    box-sizing: border-box;
+    /*background: red;*/
+    position: relative;
+    top: 0px;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 600px) {
+  #section1 {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /*background: red;*/
+    position: relative;
+    top: 0px;
+    margin-top: 0px;
+  }
+
+  .ti-main-font {
+    font-size: 42px !important;
+    margin: 30px !important;
+  }
+}
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+  max-height: 700px;
+}
+
 .section2 {
   height: 100vh;
 }
@@ -589,6 +716,9 @@ footer ul li a:hover {
   line-height: 1.5;
   font-family: "Varela Round", sans-serif;
 }
+.collab.ngo i {
+  font-size: 24px;
+}
 
 .internship {
   font-family: "Varela Round", sans-serif;
@@ -624,6 +754,19 @@ footer ul li a:hover {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+}
+.ngo_details h3 {
+  margin: 0 auto 10px;
+  text-align: left;
+}
+.ngo_details i {
+  margin-right: 20px;
+  font-size: 24px;
+}
+.ngo_details .bottom {
+  padding: 16px;
+  background: #EEE;
+  margin-top: 8px;
 }
 .ngo_details ul {
   padding: 0;

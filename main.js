@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['ngMaterial','ngAnimate','ngRoute','ngMessages','ngSanitize']);
+var app = angular.module('app', ['ngMaterial','ngAnimate','ngRoute','ngMessages','ngSanitize','angular-carousel']);
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
   .primaryPalette('teal', {
@@ -31,6 +31,9 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
   }).when("/about_collabs", {
     controller: "CollabCtrl",
     templateUrl: "templates/about.collabs.html"
+  }).when("/about_collabs_apply", {
+    controller: "CollabCtrl",
+    templateUrl: "templates/about.collabs.apply.html"
   }).when("/faq", {
     controller: "MainCtrl",
     templateUrl: "templates/about.faq.html"

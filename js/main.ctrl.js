@@ -1,5 +1,19 @@
 app.controller('MainCtrl', function($scope, $location, $mdDialog, $mdToast, $rootScope, $routeParams, $http, $window, $log, $document, $mdSidenav, $timeout) {
-
+  $scope.carouselImages= [
+       {
+            "Name" : "Artists performing in Rendezvous 2017",
+            "img" : "images/carousel/image1.png"
+        },{
+            "Name" : "Artists performing in Rendezvous 2017",
+            "img" : "images/carousel/image2.jpg"
+        },{
+            "Name" : "Artists performing in Rendezvous 2017",
+            "img" : "images/carousel/image3.jpg"
+        },{
+            "Name" : "Artists performing in Rendezvous 2017",
+            "img" : "images/image4.jpg"
+        }
+    ];
   $scope.accordianData = [
         {
             "question" : "What is NSS IIT Delhi all about?",

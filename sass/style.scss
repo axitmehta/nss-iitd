@@ -181,6 +181,130 @@ footer{
 
 
 // home.html starts from here
+/*partial/home.html section1 css starts from here*/
+#section1{
+  height: 100vh;
+  max-height: 700px;
+  .img-carousel {
+    height: 100%;
+    ul {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      li {
+        display: inline;
+        width: 100%;
+        overflow: hidden;
+        img {
+         vertical-align: top;
+         position: absolute;
+         top: 0;
+         width: 100%;
+         height: auto;
+       }
+      }
+    }
+  }
+}
+.text-over-img{
+  overflow: hidden;
+  position: relative;
+  top: -100%;
+  height: 100%;
+  font-family: $varela;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: rgba(0,0,0,0.62);
+  color:#f2f2f2;
+  h2{
+    font-size: 3.5rem;
+    font-family: $montserrat;
+    margin-bottom: 0;
+  }
+  h4{
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+}
+@media (max-width:1280px){
+  .text-over-img{
+    overflow: hidden;
+    position: relative;
+    top: 0%;
+    height: 100%;    background: url(../images/image2.jpg);
+  }
+}
+.text-over-img .head-wrapper{
+  margin: auto;
+}
+.v-align{
+  font-size: 28px;
+  line-height: 51px;
+  margin-bottom: 0;
+  margin: 50px;
+}
+@media (max-width:600px){
+  .text-over-img{
+    overflow: hidden;
+    position: relative;
+    top: -100%;
+    height: 100vh;
+    max-height: 600px;
+    background: url(../images/image2.jpg);
+  }
+  .v-align{
+    margin:0 50px;
+  }
+}
+@-moz-document url-prefix() {
+  .text-over-img{
+    overflow: hidden;
+    position: relative;
+    top: -100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/image2.jpg');
+  }
+}
+
+@media (max-width:1440px){
+  #section1{
+    width: 100%;
+    height: calc(100vh - 70px);
+    max-height: 610px;
+    box-sizing: border-box;
+    /*background: red;*/
+    position: relative;
+    top:0px;
+    margin-top: 70px;
+  }
+}
+@media (max-width:600px){
+  #section1{
+    width: 100%;
+    height: auto;;
+    box-sizing: border-box;
+    /*background: red;*/
+    position: relative;
+    top:0px;
+    margin-top: 0px;
+  }
+  .ti-main-font{
+    font-size: 42px !important;
+    margin: 30px !important;
+  }
+}
+.carousel-img{
+  width:100%;
+  height: 100vh;
+  max-height: 700px;
+}
+
+
+
+
 .section2{
   height: 100vh;
   .text-wrapper{
@@ -352,6 +476,9 @@ footer{
     line-height: 1.5;
     font-family: $varela;
   }
+  i{
+    font-size: 24px;
+  }
 }
 
 .internship{
@@ -391,6 +518,19 @@ footer{
     font-size: 1rem;
      font-weight: 400;
      line-height: 1.5;
+  }
+  h3{
+    margin:0 auto 10px;
+    text-align: left;
+  }
+  i{
+    margin-right: 20px;
+    font-size: 24px;
+  }
+  .bottom{
+    padding: 16px;
+    background: #EEE;
+    margin-top: 8px;
   }
   ul {
     padding: 0;

@@ -1,6 +1,11 @@
 <div class="ngo_details">
   <div class="text-wrapper">
+    <h3>Description</h3>
     <div ng-bind-html="infomodal.info.description">
+    </div>
+    <div layout="row" class="bottom" layout-align="center center">
+      <i class="ti-map-alt"></i>
+      <span>{{infomodal.info.location}}</span>
     </div>
   </div>
 </div>
