@@ -48,7 +48,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
     templateUrl: "templates/involve.events.html"
   }).when("/involve_volunteering", {
     controller: "MainCtrl",
-    templateUrl: "templates/involve_volunteering.html"
+    templateUrl: "templates/involve.volunteering.html"
   }).when("/download_magazine", {
     controller: "MainCtrl",
     templateUrl: "templates/download.magazine.html"
