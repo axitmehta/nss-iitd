@@ -1,0 +1,12 @@
+<div class="member-details">
+  <div class="text-wrapper">
+    <h3>{{infomodal.member.name}} <span>({{infomodal.member.designation}})  </span> </h3>
+    <div ng-bind-html="infomodal.member.description">
+    </div>
+    <br>
+    <p> <span> Projects: </span> {{infomodal.member.projects}} </p>
+    <div layout="row" class="bottom" layout-align="center center">
+      <span>{{infomodal.member.email}}</span>
+    </div>
+  </div>
+</div>

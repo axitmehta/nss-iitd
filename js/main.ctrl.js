@@ -1,4 +1,15 @@
 app.controller('MainCtrl', function($scope, $location, $mdDialog, $mdToast, $rootScope, $routeParams, $http, $window, $log, $document, $mdSidenav, $timeout) {
+  $scope.toggleLeft = buildToggler('left');
+  $scope.toggleRight = buildToggler('right');
+
+  function buildToggler(componentId) {
+    return function() {
+      $mdSidenav(componentId).toggle();
+    };
+  }
+  $timeout(function() {
+    $rootScope.loadingComp=true;
+  }, 2000);
   $scope.carouselImages= [
        {
             "Name" : "Artists performing in Rendezvous 2017",

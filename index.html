@@ -6,22 +6,25 @@
     <title>NSS IIT Delhi | 2017</title>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round|Lato|Montserrat|Ubuntu" rel="stylesheet">
-    <link href="bower_components/material-design-icons" rel="stylesheet">
     <link rel="stylesheet" href="themify-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <base href="/">
   </head>
   <body ng-app="app" ng-controller="MainCtrl">
+    <div class="loader-wrapper row center" ng-hide="loadingComp">
+      <div class="loading"></div>
+    </div>
     <nav class="row-nav">
-      <div layout="column"	class="wrapper container">
+      <div layout="column"	class="wrapper">
         <!-- <div flex-gt-sm="20" flex="100" class="logo-wrapper" layout="row" layout-align-sm="center center" layout-align-xs="center center">
 
         </div> -->
-        <div flex="100" hide-sm hide-xs layout="row" layout-align="center center" class="nav-li-items">
-          <ul class="dropmenu">
+        <div flex="100" layout="row" layout-align="center center" class="nav-li-items">
+          <i class="ti-menu" hide-gt-sm aria-hidden="true" ng-click="toggleLeft()"></i>
+          <ul class="dropmenu" hide-sm hide-xs>
             <li><a href="#!/">Home</a></li>
             <li class="dropdown">
-              <a href="#" class="dropbtn">About Us</a>
+              <a href="" class="dropbtn">About Us</a>
               <div class="dropdown-content">
                 <a href="#!/about_nss">About NSS IITD</a>
                 <a href="#!/about_domains">Domains</a>
@@ -30,7 +33,7 @@
               </div>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropbtn">Get Involved</a>
+              <a href="" class="dropbtn">Get Involved</a>
               <div class="dropdown-content">
                 <a class="sublink" href="#!/involve_volunteering">Regular Volunteering</a>
                 <a class="sublink" href="#!/involve_events">Events</a>
@@ -38,17 +41,20 @@
               </div>
             </li>
             <li class="dropdown">
-              <a href="#!" class="dropbtn">Hours</a>
+              <a href="" class="dropbtn">Hours</a>
               <div class="dropdown-content">
                 <a class="sublink" href="#!/visitor">Check hours</a>
-                <input  placeholder="Entry number"/>
+                <md-input-container>
+                  <label>Enter Hours</label>
+                  <input ng-model="user.title">
+                </md-input-container>
                 <a class="sublink" href="#!/pending_hours">Pending hours</a>
                 <a class="sublink" href="#!/hours_complaint">Hours Complaint</a>
                 <a class="sublink" href="#!/hours_policy">Policy</a>
               </div>
             </li>
             <li class="dropdown">
-              <a href="#!" class="dropbtn">Downloads</a>
+              <a href="" class="dropbtn">Downloads</a>
               <div class="dropdown-content">
                 <a class="sublink" href="#!/download_magazine">Magazine</a>
                 <a class="sublink" href="#!/download_report">Semester reports</a>
@@ -56,7 +62,7 @@
               </div>
             </li>
             <li class="dropdown">
-              <a href="#!" class="dropbtn">Connect</a>
+              <a href="" class="dropbtn">Connect</a>
               <div class="dropdown-content">
                 <a class="sublink" href="#!/visitor">Google Subscribe</a>
                 <a class="sublink" href="#!/project">Facebook Subscribe</a>
@@ -64,7 +70,7 @@
               </div>
             </li>
             <li class="dropdown">
-              <a href="#!" class="dropbtn">Team</a>
+              <a href="" class="dropbtn">Team</a>
               <div class="dropdown-content">
                 <a class="sublink" href="#!/team_current">Current Team</a>
                 <a class="sublink" href="#!/team_previous">Team 2016-17</a>
@@ -72,7 +78,7 @@
             </li>
             <li><a href="#section7">Gallery</a></li>
             <li class="dropdown">
-              <a href="#!" class="dropbtn">Contact Us</a>
+              <a href="" class="dropbtn">Contact Us</a>
               <div class="dropdown-content">
                 <a class="sublink" href="#!/visitor">Contact Details</a>
                 <a class="sublink" href="#!/project">NSS Directory </a>
@@ -83,17 +89,91 @@
         </div>
       </div>
     </nav>
+    <md-sidenav class="md-sidenav-left" md-component-id="left"
+                md-disable-backdrop md-whiteframe="4">
+      <div class="header" layout="column" layout-align="center center">
+        <a href="#!/"><img src = "images/logo.png" style="height:100px"></a>
+        <i class="ti-close" aria-hidden="true" hide-gt-sm ng-click="toggleLeft()"></i>
+      </div>
+      <md-content layout-margin layout="row" layout-align="start start">
+        <ul class="dropmenu">
+          <li><a href="#!/">Home</a></li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">About Us</a>
+            <div class="dropdown-content">
+              <a href="#!/about_nss">About NSS IITD</a>
+              <a href="#!/about_domains">Domains</a>
+              <a href="#!/about_collabs">Collaborations</a>
+              <a href="#!/faq">FAQ's</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">Get Involved</a>
+            <div class="dropdown-content">
+              <a class="sublink" href="#!/involve_volunteering">Regular Volunteering</a>
+              <a class="sublink" href="#!/involve_events">Events</a>
+              <a class="sublink" href="#!/involve_internship">Internship</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">Hours</a>
+            <div class="dropdown-content">
+              <a class="sublink" href="#!/visitor">Check hours</a>
+              <md-input-container>
+                <label>Enter Hours</label>
+                <input ng-model="user.title">
+              </md-input-container>
+              <a class="sublink" href="#!/pending_hours">Pending hours</a>
+              <a class="sublink" href="#!/hours_complaint">Hours Complaint</a>
+              <a class="sublink" href="#!/hours_policy">Policy</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">Downloads</a>
+            <div class="dropdown-content">
+              <a class="sublink" href="#!/download_magazine">Magazine</a>
+              <a class="sublink" href="#!/download_report">Semester reports</a>
+              <a class="sublink" href="#!/download_app">App</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">Connect</a>
+            <div class="dropdown-content">
+              <a class="sublink" href="#!/visitor">Google Subscribe</a>
+              <a class="sublink" href="#!/project">Facebook Subscribe</a>
+              <a class="sublink" href="#!/professionals">Blog</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">Team</a>
+            <div class="dropdown-content">
+              <a class="sublink" href="#!/team_current">Current Team</a>
+              <a class="sublink" href="#!/team_previous">Team 2016-17</a>
+            </div>
+          </li>
+          <li><a href="#section7">Gallery</a></li>
+          <li class="dropdown">
+            <a href="" class="dropbtn">Contact Us</a>
+            <div class="dropdown-content">
+              <a class="sublink" href="#!/visitor">Contact Details</a>
+              <a class="sublink" href="#!/project">NSS Directory </a>
+              <a class="sublink" href="#!/project">Feedback/ complaints</a>
+            </div>
+          </li>
+        </ul>
+      </md-content>
+    </md-sidenav>
     <div data-ng-view="" class="ngview"></div>
     <footer>
       <div class="container" layout="column">
-        <div class="links" layout="row" layout-align="center center">
+        <div class="links" layout-gt-sm="row" layout="column" layout-align="center center">
           <a href="">
             Hours Complaint
           </a>
           <a href="">
             Pending Hours
           </a>
-          <a href="">
+          <a href="" hide-sm hide-xs>
             <img src="images/logo.png">
           </a>
           <a href="">
@@ -132,7 +212,7 @@
             </li>
           </ul>
         </div>
-        <p> Copyright (c) 2017 Copyright Holder All Rights Reserved.   </p>
+        <p> Copyright © 2017 NSS IITD All Rights Reserved.   </p>
       </div>
     </footer>
     <script type='text/javascript' src="bower_components/angular/angular.min.js"></script>
