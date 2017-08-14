@@ -1,0 +1,22 @@
+<div class="team-section">
+  <div class="container">
+    <h1>Previous Team</h1>
+    <div class="at-grid" data-column="4">
+      <div class="at-column" ng-repeat="member in  lastTeam track by $index">
+        <div class="at-user">
+          <div class="at-user__avatar"><img src="images/team/{{member.image}}"/></div>
+          <div class="at-user__name">{{member.name}}</div>
+          <div class="at-user__title">{{member.position}}</div>
+          <ul class="at-social">
+            <li class="at-social__item">
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                {{member.email}}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

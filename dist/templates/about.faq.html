@@ -1,0 +1,15 @@
+<div class="about faq">
+  <div class="container">
+    <h1>Questions? Look here</h1>
+    <p class="subheader">Can't find an answer? emails us at nssiitd@gmail.com</p>
+    <div class="md-accordion" ng-repeat="data in accordianData">
+      <div  class="toolbar" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+        <div class="md-toolbar-tools">
+          <h2>{{data.question}}</h2>
+          <span flex=""></span>
+          <span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+        </div>
+      </div>
+      <div ng-class="{dataContent:true, activeContent:data.expanded}" ng-bind-html="data.answer"></div>
+    </div>
+</div>

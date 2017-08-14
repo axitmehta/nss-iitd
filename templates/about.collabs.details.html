@@ -1,11 +1,14 @@
 <div class="ngo-details">
   <div class="text-wrapper">
     <h3>{{infomodal.info.name}}</h3>
-    <div ng-bind-html="infomodal.info.description">
+    <div class="info" ng-bind-html="infomodal.info.description">
     </div>
     <div layout="row" class="bottom" layout-align="center center">
       <i class="ti-map-alt"></i>
       <span>{{infomodal.info.location}}</span>
     </div>
+    <a class="custom-btn" href="{{ngo.link}}" aria-label="More">
+      Apply
+    </a>
   </div>
 </div>

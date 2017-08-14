@@ -1,0 +1,15 @@
+<div class="collab ngo">
+  <div class="container" layout-wrap layout="row" layout-align="center center">
+    <div flex-xs="100" flex-md="25" flex-sm="33" flex="100"layout="column" ng-repeat="ngo in collabrationNGOs">
+      <md-card ng-click="expandDetail(ngo, $envent)">
+        <img ng-src="images/{{ngo.image}}" ng-if="ngo.image!==''" class="md-card-image" alt="Washed Out">
+        <img ng-src="images/blank.png" ng-if="ngo.image===''" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{ngo.name}}</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+</div>

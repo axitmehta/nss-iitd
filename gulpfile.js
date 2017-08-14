@@ -2,7 +2,6 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     gutil = require('gulp-util'),
     jshint = require('gulp-jshint'),
-    minify = require('gulp-minify'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
@@ -18,10 +17,24 @@ gulp.task('clean', function() {
 gulp.task('build-bower-lib', function() {
   return gulp.src('bower_components/**/*')
     .pipe(gulp.dest('dist/bower_components'));
-})
+});
 gulp.task('build-root', function() {
-  return gulp.src(['index.html','main.js','themify-icons.css'])
+  return gulp.src(['index.html','themify-icons.css'])
     .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('build-bower-js', function() {
+  return gulp.src(['bower_components/angular/angular.min.js',
+                    'bower_components/angular-material/angular-material.min.js',
+                  'bower_components/angular-sanitize/angular-sanitize.min.js',
+                  'bower_components/angular-animate/angular-animate.min.js',
+                  'bower_components/angular-aria/angular-aria.min.js',
+                  'bower_components/angular-messages/angular-messages.min.js',
+                  'bower_components/angular-route/angular-route.min.js',
+                'bower_components/angular-carousel/dist/angular-carousel.js',
+              'bower_components/angular-touch/angular-touch.js'])
+    .pipe(concat('libs.min.js'))
+    .pipe(gulp.dest('dist/js'));
 });
 gulp.task('build-images', function() {
   return gulp.src(['images/**'])
@@ -31,16 +44,12 @@ gulp.task('build-fonts', function () {
   return gulp.src('fonts/**')
     .pipe(gulp.dest('dist/fonts'));
 });
-gulp.task('build-python', function () {
-  return gulp.src('python/**')
-    .pipe(gulp.dest('dist/python'));
-});
 gulp.task('build-templates', function () {
   return gulp.src('templates/*.html')
     .pipe(gulp.dest('dist/templates/'));
 });
 gulp.task('build-sourcejs', function() {
-  return gulp.src(['js/*.js'])
+  return gulp.src(['main.js', 'js/*.js'])
     .pipe(concat('nssiitd.js'))
     .pipe(gulp.dest('dist/js'));
 });
@@ -57,16 +66,9 @@ gulp.task('compass-build', function() {
     }))
     .pipe(gulp.dest('dist/css'));
 });
-gulp.task('build', function() {
-  return runSequence(['build-root', 'build-sourcejs', 'build-customcss','compass-build', 'build-templates'], 'jshint');
-});
-
 gulp.task('watch-js', function() {
   gulp.watch('js/*.js', ['build-sourcejs']);
 });
-// gulp.task('watch-img', function() {
-//   gulp.watch('images/**', ['build-images']);
-// });
 gulp.task('watch-css', function() {
   gulp.watch('css/*.css', ['build-customcss']);
 });
@@ -87,20 +89,9 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('jshint', function() {
-  return gulp.src('js/*js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
-});
-
 // default task
 gulp.task('default', function() {
-  return runSequence('clean', 'build-root','build-templates', 'build-fonts','build-python','build-sourcejs', 'jshint', 'build-images', 'build-bower-lib','compass-build',
+  return runSequence('clean','build-bower-lib', 'build-bower-js', 'build-root', 'build-templates', 'build-fonts','build-sourcejs', 'build-images', 'compass-build', 'build-customcss',
     ['watch-js', 'watch-css', 'watch-html','watch-root','compass-watch','connect']
   );
-});
-
-// task to run in production
-gulp.task('build-prod', function() {
-  return runSequence('clean', 'build-root', 'build-sourcejs', 'build-customcss', 'compass-build', 'build-templates', 'build-fonts', 'build-python', 'build-images','build-bower-lib');
 });

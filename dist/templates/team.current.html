@@ -1,0 +1,19 @@
+<div class="team-section">
+  <div class="container">
+    <h2>Current Team</h2>
+    <div class="at-grid" data-column="5">
+      <div class="at-column" ng-repeat="member in  currentTeam track by $index" ng-click="expandDetail(member, $event)">
+        <div class="at-user">
+          <div class="at-user__avatar"><img src="images/team/{{member.image}}"/></div>
+          <div class="at-user__name">{{member.name}}</div>
+          <div class="at-user__title">{{member.designation}}</div>
+          <div class="at-social">
+            <div class="at-social__item">
+              {{member.email}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

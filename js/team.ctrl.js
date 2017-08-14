@@ -1,6 +1,5 @@
 app.controller('TeamCtrl', function($scope, $location, $mdDialog, $mdToast, $rootScope, $routeParams, $http, $window, $log, $document, $mdSidenav, $timeout) {
   $scope.expandDetail=function (member, ev) {
-    console.log(member);
     $mdDialog.show({
       controller: function ($mdDialog) {
         var vm = this;

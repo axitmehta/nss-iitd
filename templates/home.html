@@ -1,37 +1,273 @@
 <section id="section1">
-  <div class="img-carousel" hide-sm hide-xs>
-    <ul rn-carousel class="image" rn-carousel rn-carousel-index="carouselIndex22" rn-carousel-duration="700" rn-carousel-auto-slide="7" rn-carousel-easing rn-carousel-buffered class="carousel2">
-      <li ng-repeat="image in carouselImages">
-        <img src="{{ image.img }}"/>
-        <div class="text-wrapper" layout="column" layout-align="center center">
-        </div>
-      </li>
-    </ul>
+  <div class="container" layout-gt-sm="row" layout="column">
+    <div class="bg-overlay-1">
+      <h1>Hello</h1>
+    </div>
+    <!-- <div hide-sm hide-xs class="bg-overlay-2">
+      <h1>Awarness</h1>
+    </div> -->
+    <div flex-gt-sm="50" flex="100" layout="column" class="header" layout-margin layout-align="center start">
+      <h1>NSS IIT Delhi</h1>
+      <h4>Be the change you wish to see in the world</h4>
+      <a class="custom-btn" href="#section2">Explore</a>
+    </div>
+    <div flex-gt-sm="50" flex="100" hide-sm hide-xs layout="column" layout-align="center center">
+      <div class="img-wrapper">
+        <ul rn-carousel class="image" rn-carousel-controls>
+          <li ng-repeat="image in carouselImages">
+            <img src="{{image.img}}" />
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div flex="100" layout="column" class="text-over-img" layout-margin layout-align="center center">
-   <div layout="column"  layout-align="center center" class="radio-info-col">
-     <h2>NSS IIT Delhi</h2>
-     <h4>Be the change you wish to see in the world</h4>
-     <a class="custom-btn" href="#section2">know more</a>
-   </div>
- </div>
 </section>
-
 <section class="section2" id="section2">
-  <div class="container text-wrapper" layout="row" layout-align="center center">
+  <div class="container"  data-bg-text="Introduction" layout="column" layout-align="center center">
+    <h1 class="head"> What is it? </h1>
     <p>
-      Our sole aim is to motivate students at IITD to indulge in nation building activities through various events and projects which are aimed towards the benefit of people in and around IIT Delhi. We share the belief that such activities are almost always means of great satisfaction and joy.
+      NSS IIT Delhi is the IIT Delhi chapter of the National Service Scheme,
+      institutionalized under the Ministry of Youth Affairs & Sports Govt. of India.
+       Our sole aim is to motivate students at IITD to indulge in nation building
+       activities through various events and projects which are aimed towards the
+       benefit of people in and around IIT Delhi. We share the belief that such
+       activities are almost always means of great satisfaction and joy.
     </p>
   </div>
 </section>
-<section class="section3">
-  <div class="container" layout="column" layout-align="center center">
-    <h3>NSS IITD has a volunteer base of around 2000 students belonging to various disciplines and degrees of IIT Delhi.</h3>
-    <a class="custom-btn" href=''>Know more</a>
+<section class="section3" id="section3">
+  <div class="container"  data-bg-text="Nature of work" layout="column" layout-align="center center">
+    <h1 class="head"> What we do? </h1>
+    <p>
+      NSS IITD has a volunteer base of around 2000 students belonging to various
+      disciplines and degrees of IIT Delhi. We work on a diverse range of social issues
+      including blood donation, teaching, environmental issues, etc. We also collaborate
+      with several NGO’s in and around IIT Delhi on working on these issues.
+      Here is a brief of our activities
+    </p>
+    <div class="work-section" layout-gt-sm="row" layout="column" layout-align="start start">
+      <div layout-margin layout="column" layout-align="center center">
+        <div>
+          <img src="images/icons/classroom.svg" />
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>Teaching Projects</h3>
+          <p style="text-align:left;">
+            Our volunteers are involved in direct teaching of street kids at Ber Sarai
+             (a small locality in the neighborhood) in association with NGO Khoj, teaching of
+             underprivileged kids at IIT Delhi Central School in association with NGO Vidya,
+              skill development for youth in association with NGO Ank.
+          </p>
+        </div>
+      </div>
+      <div layout-margin layout="column" layout-align="center center">
+        <div>
+          <img src="images/icons/bloodconnect.svg" />
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>Blood Connect</h3>
+          <p style="text-align:left;">
+            Blood Connect is an ambitious IITD project launched with an aim to
+            remove the concept of replacement donors through regular voluntary blood donations.
+             It is slowly expanding its network and has already conducted Blood
+             Donation Camps in several colleges in Delhi.
+          </p>
+        </div>
+      </div>
+      <div layout-margin layout="column" layout-align="center center">
+        <div>
+          <img src="images/icons/screenings.svg" />
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>Movie Screenings</h3>
+          <p style="text-align:left;">
+            In order to increase awareness about several social issues among the student
+            community we conduct periodic lectures by eminent personalities working in the
+            diverse social areas. With the same aim in mind, we also organize screenings of
+            movies based on social themes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="work-section" layout-gt-sm="row" layout="column" layout-align="start start">
+      <div layout-margin layout="column" layout-align="center center">
+        <div>
+          <img src="images/icons/internship.svg" />
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>Internships</h3>
+          <p style="text-align:left;">
+            We organize ground level internships during winter and summer vacations
+             for students with different NGO’s like Pravah, Hazard Centre, Milaan, Sweecha,
+              Seva Mandir etc. These internships have seen a great response from IIT Delhi
+              student community and provided a great learning experience for the participants.
+          </p>
+        </div>
+      </div>
+      <div layout-margin layout="column" layout-align="center center">
+        <div>
+          <img src="images/icons/workshop.svg" />
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>Workshops</h3>
+          <p style="text-align:left;">
+            We conduct several cloth collection drives (with Goonj), cleanliness drives,
+             tree plantation drive, nature walks throughout the year. Besides, workshops
+              on several themes like AIDS awareness, self defence, Right to Information
+              etc are also organized.
+          </p>
+        </div>
+      </div>
+      <div layout-margin layout="column" layout-align="center center">
+        <div>
+          <img src="images/icons/projects.svg" />
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>Greener Projects</h3>
+          <p style="text-align:left;">
+            We encourage students to do projects related to environmental sustainability
+            of the campus. They include Need for Rain Water Harvesting Infrastructure expansion,
+             Water Saving measures in the hostels, Greener Transportation through electric rickshaws,
+              Introduction of the waste management systems like Roli Poli, etc
+          </p>
+        </div>
+      </div>
+    </div>
+    <a class="custom-btn" href="#!/about_nss">See all</a>
   </div>
 </section>
+<section class="section4" id="section4">
+  <div class="container"  data-bg-text="Collaborations" layout="column" layout-align="center center">
+    <h1 class="head"> We love bonding </h1>
+    <div layout-gt-sm="row" layout="column">
+      <div layout="row" layout-wrap flex-gt-sm="50" hide-sm hide-xs class="ngo-imgs" layout-align="center center">
+        <a href="">
+          <img src="images/NGO/aarohan.png" />
+          <!-- <h3>Aarohan</h3> -->
+        </a>
+        <a href="">
+          <img src="images/NGO/ank.png" />
+          <!-- <h3>Ank</h3> -->
+        </a>
+        <a href="">
+          <img src="images/NGO/ekjut.png" />
+          <!-- <h3>Ekjut</h3> -->
+        </a>
+        <a href="">
+          <img src="images/NGO/hazard-center.png" />
+          <!-- <h3>Hazard Center</h3> -->
+        </a>
+        <a href="">
+          <img src="images/NGO/pravah.png" />
+          <!-- <h3>Pravah</h3> -->
+        </a>
+        <a href="">
+          <img src="images/NGO/stree.png" />
+          <!-- <h3>Stree</h3> -->
+        </a>
+        <a href="">
+          <img src="images/NGO/vidya.png" />
+          <!-- <h3>Vidya</h3> -->
+        </a>
+        <!-- <div flex="50" layout="column">
+          <div layout="row" layout-align="center end">
+            <a href="" ng-class="{'ngo--hover':hoverNgo===1}" ng-mouseenter="ngoDesc(1)">
+              <img src="images/NGO/vidya.png" />
+            </a>
+            <a href="" ng-class="{'ngo--hover': hoverNgo===2}" ng-mouseenter="ngoDesc(2)">
+              <img src="images/NGO/ekjut.png" />
+            </a>
+          </div>
+          <div layout="row" layout-align="center end">
+            <a href="" ng-class="{'ngo--hover':hoverNgo===3}" ng-mouseenter="ngoDesc(3)">
+              <img src="images/NGO/smile.png" />
+            </a>
+            <a href="" ng-class="{'ngo--hover':hoverNgo===4}" ng-mouseenter="ngoDesc(4)">
+              <img src="images/NGO/pravah.png" />
+            </a>
+          </div>
+        </div>
+        <div layout="column" layout-align="center start">
+          <h3>{{showNgo.name}}</h3>
+          <p>{{showNgo.desc}}</p>
+        </div> -->
 
-<!-- <section class="section4" layout="row" layout-align="center center">
-  <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=manish9461%40gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FCalcutta" style="border:solid 1px #777" width="800" height="400" frameborder="0" scrolling="no"></iframe>
-
+      </div>
+      <div flex-gt-sm="50" flex="100">
+        <p style="text-align:left">
+          We have collaborations with several NGO’s in different fields of volunteering. The list includes Pravah, Hazard centre, Goonj, Khoj, Arushi, Ank, Vidya, Saksham, National Association for Blind, Jamghat, Friends Organisation and still expanding.
+        </p>
+        <a class="custom-btn" href="#!/about_collabs">Know more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section5" id="section5">
+  <div class="container"  data-bg-text="Organization" layout="column" layout-align="center center">
+    <h1 class="head"> Team behind this </h1>
+    <p>
+      NSS IITD is mentored and headed by our Coordinator, Dr. Rajesh Prasad.
+      He is supported by two other faculty advisors Dr. Sriram Hegde and Dr. M.R.
+       Ravi. Among students, the team is lead by 2 General Secretaries, followed by
+        8 secretaries who are helped by 21 executives in the organization of various
+         events and projects. The team is obviously incomplete without the volunteers
+          (students) of IITD who make the events successful with their enthusiasm.
+          Several other professors and alumni are associated with NSS IITD at various levels.
+    </p>
+    <a class="custom-btn" href="#!/team_current">meet the team</a>
+  </div>
+</section>
+<section class="section6" id="section6">
+  <div class="container" data-bg-text="Notify" layout="column" layout-align="center center">
+    <h1 class="head" align="center">Be notified</h1>
+    <p>Enter your year and email address for event subscription or join our <a href="https://www.facebook.com/groups/nssiitd/" target="_blank" class="fb"><img src="images/icons/facebook.svg"  height="28" width="28"/></a>group</p>
+    <form name="subscribeForm" class="subscribe" layout="column" layout-align="center center">
+      <div layout-gt-xs="row" layout="column">
+        <md-input-container>
+          <label>Group</label>
+          <md-select name="type" ng-model="user.type" required>
+            <md-option value="nssiitd-2016">2016 Entry</md-option>
+            <md-option value="nssiitd-2015">2015 Entry</md-option>
+            <md-option value="nssiitd-2014">2014 Entry</md-option>
+            <md-option value="nssiitd2013">2013 Entry</md-option>
+            <md-option value="nss_pg_14">PG students</md-option>
+            <md-option value="nss-iit-delhi-external-registrations">External Registration</md-option>
+          </md-select>
+        </md-input-container>
+        <button class="custom-btn" ng-disabled="subscribeForm.type.$invalid" href="javascript:void(0)" ng-click="subscribe(user)">Subscribe</button>
+      </div>
+    </form>
+    <h2>Or getting updates on NSS events a problem? Download our App</h2>
+    <div class="icon-wrapper" layout="row" layout-align="center center">
+      <a disabled href="https://itunes.apple.com/us/app/nss-iitd/id905722260?mt=8">
+        <img src="images/icons/apple-store.svg" height="50" width="50" />
+      </a>
+      <a  disabled href="http://nss.iitd.ac.in/Android/NSS_App.apk">
+        <img src="images/icons/play-store.svg" height="50" width="50" />
+      </a>
+      <a disabled href="https://www.microsoft.com/store/apps/9nblggh1zhnh">
+        <img src="images/icons/windows-store.svg" height="50" width="50" />
+      </a>
+    </div>
+</section>
+<!-- <section class="section6" id="section6">
+  <div class="container"  data-bg-text="Contact Us" layout="column" layout-align="center center">
+    <h1 class="head" align="center">Of course, We are social ;) </h1>
+    <div class="icon-wrapper" layout="row" layout-align="center center">
+      <a href="">
+        <img src="images/twitter.svg" height="50" width="50" />
+      </a>
+      <a href="">
+        <img src="images/facebook.svg" height="50" width="50" />
+      </a>
+      <a href="">
+        <img src="images/instagram.svg" height="50" width="50" />
+      </a>
+      <a class="telegram-logo" href="">
+        <img src="images/linkedin.svg" height="50" width="50" />
+      </a>
+    </div>
+    <p style="margin:0;"><b>Or </b></p>
+    <p>Drop us an <a href="">email</a></p>
+  </div>
 </section> -->

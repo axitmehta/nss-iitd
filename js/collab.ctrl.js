@@ -1,7 +1,6 @@
 app.controller('CollabCtrl', function($scope, $location, $mdDialog, $mdToast, $rootScope, $routeParams, $http, $window, $log, $document, $mdSidenav, $timeout) {
-  
+
   $scope.expandDetail=function (ngo, ev) {
-    console.log(ngo);
     $mdDialog.show({
       controller: function ($mdDialog) {
         var vm = this;
@@ -29,29 +28,7 @@ app.controller('CollabCtrl', function($scope, $location, $mdDialog, $mdToast, $r
     });
   };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // json objects starts from here
+  // NGO collaboration list starts from here
   $scope.collabrationNGOs=[{"image": "neem.jpg", "description": "In the words of Mahatma Gandhi, \u201cLiterary Education is of no value if it is not able to build up a sound character.\u201d Keeping the above thought in mind, The Neem School Project was initiated by NSS IITD in collaboration with the White Swan Foundation to ensure quality value education in slum children. We, as a part of the Neem school, visit slums near IITD and try to inculcate the values of honesty, integrity, kindness, helping- nature, cleanliness, hygiene and a lot more through fun filled activities like painting, story-telling, games, etc. The NSS volunteers, called the Value Initiators, interact with the Value Multipliers, i.e. children in age group of 6-14 years and aim at developing good moral character and conduct in the children.", "link": "http://nss.iitd.ac.in/links/NEEM_School", "name": "Neem School", "location": "Katwaria Sarai"},
   {"image": "vidya.jpg", "description": "To the world you may be just a teacher, but to your students you are a HERO.\nThe foundation of every nation is the education of its youth. Believing in this core value, our prime focus at VIDYA is to teach students from classes 4th to 10th and inculcate the fundamental concepts of all subjects, especially Mathematics and Science. Teaching is a wonderful activity, not only the students learn but we, as their tutor and guide, learn a lot too. Volunteers of our teaching projects have demonstrated to have a lot of fun while teaching the kids. We follow a simple and flexible technique of teaching with adoption of interactive learning methodologies, focused on activity based teaching and learning experience. Our contribution includes helping the kids with their regular homework and providing remedial sessions for their doubts and conceptual understanding of the subject. We do believe in 'all work and no play makes jack a dull boy'. Abiding by this, an equal importance is also given to co-curricular activities which not only freshen up minds of the students but also help them develop inter-personal skills. In order to achieve out targets and ensure a good learning exercise, our volunteers go to Kendriya Vidyalaya, near Kailash hostel on all weekdays from 3-5 pm. Volunteers are expected to be regular and enjoying the task they have taken up. And as NSS, we try to provide you the atmosphere to help you develop the memorable experience.", "link": "http://nss.iitd.ac.in/links/VIDYA_Teaching", "name": "VIDYA Teaching Project", "location": "Kendriya Vidyalaya, IITD"},
   {"image": "apna1.jpg", "description": "A stable and nurturing childhood is essential for a healthy physio- emotional and spiritual development of a human being. Aiming this in children's home project we try to give kids various exposure to different things, inculcate thinking skills in them, provide them creative environment for studies through various activities. \"An investment in knowledge pays the best dividends\". Other than studies our focus is to develop their personality and improve their interpersonal skills. In this project 4 volunteers visit Apna parivaar children's home on every sunday from 12:30 to 5:30 in Mandigaon (near Chhatarpur). For keeping the regular track on kids volunteers have to be regular and passionate for the work.", "link": "http://nss.iitd.ac.in/links/Apna_Parivaar_Children_Home", "name": "Apna Parivaar Children Home", "location": "Mandi Village (Near Chhatarpur)"},

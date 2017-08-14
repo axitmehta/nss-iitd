@@ -3,31 +3,29 @@
 @import "partials/variable";
 @import "partials/normalize";
 @font-face {
-  font-family:"Input Mono Narrow";
-  src: url('../fonts/input_mono_narrow.woff') format('woff');
-}
-@font-face {
-  font-family: "Input Mono Bold";
-  src: url('../fonts/input_mono_bold.woff') format('woff');
-}
-@font-face {
-  font-family: "Input Mono Narrow Bold";
-  src: url('../fonts/input_mono_narrow_bold.woff') format('woff');
+	font-family: 'themify';
+	src:url('../fonts/themify.eot?-fvbane');
+	src:url('../fonts/themify.eot?#iefix-fvbane') format('embedded-opentype'),
+		url('../fonts/themify.woff?-fvbane') format('woff'),
+		url('../fonts/themify.ttf?-fvbane') format('truetype'),
+		url('../fonts/themify.svg?-fvbane#themify') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 html {
   background: #ffffff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-size: 14px;
 }
 body{
-  font-family: $ubuntu;
+  font-family: $montserrat;
   background: #ffffff;
+  font-size: 14px;
 }
 h3{
   color: #34383a;
   font-size: 1.7rem;
-  font-weight: 500;
-  max-width:700px;
   text-align: center;
 }
 h1{
@@ -37,8 +35,102 @@ h1{
   outline: none;
   border: 0;
 }
+button[disabled], input[disabled], select[disabled] {
+  cursor: not-allowed;
+  opacity: 0.8;
+  z-index: 10 !important;
+}
 
+input[type=range] {
+  width: 300px; }
 
+ul[rn-carousel] {
+  overflow: hidden;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  white-space: nowrap;
+  position: relative;
+  -webkit-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+  ul[rn-carousel] > li {
+    color: black;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: visible;
+    vertical-align: top;
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: normal;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: inline-block; }
+
+/* prevent flickering when moving buffer */
+ul[rn-carousel-buffered] > li {
+  display: none; }
+
+ul[rn-carousel-transition="hexagon"] {
+  overflow: visible; }
+
+/* indicators */
+div.rn-carousel-indicator span {
+  cursor: pointer;
+  color: #666; }
+  div.rn-carousel-indicator span.active {
+    color: white; }
+
+/* prev/next controls */
+.rn-carousel-control {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  font-size: 2rem;
+  position: absolute;
+  top: 40%;
+  opacity: 0.75;
+  cursor: pointer; }
+  .rn-carousel-control:hover {
+    opacity: 1; }
+  .rn-carousel-control.rn-carousel-control-prev {
+    left: 0.5em;
+    background: white;
+    height: 50px;
+    color: black;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 43px 15px rgba(0, 0, 0, 0.17);}
+    .rn-carousel-control.rn-carousel-control-prev:before {
+      content: "\e64a";
+      font-family: 'themify';
+      position: relative;
+      top: 14px;
+      font-size: 22px;
+      left: 14px;
+      font-weight: 600;}
+  .rn-carousel-control.rn-carousel-control-next {
+    right: 0.5em;
+    background: white;
+    height: 50px;
+    color: black;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 43px 15px rgba(0, 0, 0, 0.17);}
+    .rn-carousel-control.rn-carousel-control-next:before {
+      content: "\e649";
+      font-family: 'themify';
+      position: relative;
+      top: 14px;
+      font-size: 22px;
+      left: 14px;
+      font-weight: 600;}
 // loading wrapper
 // this is loading wrapper for inde.html page
 .loader-wrapper{
@@ -98,7 +190,7 @@ h1{
     width: 1170px;
   }
   @media screen and (min-width: $xl-break) {
-    width: 1400px;
+    width: 1200px;
   }
 }
 .container-fluid {
@@ -109,6 +201,7 @@ h1{
 }
 
 .row-nav{
+
   height: 4rem;
   width: 100%;
   position: fixed;
@@ -117,10 +210,16 @@ h1{
   // box-shadow: 0 2px 20px 0 rgba(128, 128, 128, 0.5);
   // position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+  .ti-menu{
+    position: fixed;
+    left: 20px;
+    font-size: 20px;
+  }
   .wrapper{
     height: 100%;
     max-width: 1250px;
+    margin: auto;
   }
   .btn-primary.btn-color {
     color: $btn-color;
@@ -137,10 +236,10 @@ h1{
       margin: auto 1.4rem;
       a{
         color: #42526E;
-        font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
-        font-size: 15px;
+
+        font-size: 1rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.42857142857143;
         letter-spacing: -.005em;
         cursor: pointer;
@@ -158,12 +257,20 @@ h1{
     }
   }
 }
+a.custom-link{
+  border-radius: 50px;
+  background:#6c63ff;
+  color: white !important;
+  padding: .4rem 2rem;
+  &:hover{
+    color: white;
+  }
+}
 a.sublink{
   color: #42526E;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Oxygen,Ubuntu,'Droid Sans','Helvetica Neue',sans-serif;
   font-size: 15px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.42857142857143;
   padding: 6px;
   letter-spacing: -.005em;
@@ -242,9 +349,6 @@ md-input-container{
       font-size: 24px;
     }
   }
-  md-content{
-    height: calc(100vh - 130px);
-  }
   .dropmenu{
     li.dropdown{
       display: block !important;
@@ -261,78 +365,89 @@ md-input-container{
   position: relative;
   top: 4rem;
   background: #ffffff;
+
+    margin-bottom: 5rem;
 }
 
+.ngview.main{
+  margin-bottom: 0;
+}
 // footer starts from here
 footer{
-  background: #202020;
-  color: $white;
+  color:#36434d;
+  background: #f4f6fa;
   position: relative;
   top: 4rem;
+  text-align: center;
   .container{
     padding: 5rem 0 2rem;
+    max-width: 1000px;
+    &:after {
+      font-size: 12rem;
+      color: rgba(0, 0, 0, 0.05);
+      content: attr(data-bg-text);
+      display: block;
+      font-weight: 600;
+      overflow-wrap: break-word;
+      line-height: 1;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
   }
-  .links a{
-    margin: auto 1rem;
-    text-decoration: none;
-    color: #DEE4EB ;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
+  h4{
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    @media screen and (max-width: $sm-break) {
-      margin: 1rem auto;
+  }
+  ul{
+    list-style: none;
+    white-space: nowrap;
+    text-align: left;
+    padding: 0;
+    li{
+      list-style: none;
+      a{
+        font-size: 0.87rem;
+        font-weight: 300;
+        line-height: 10px;
+        text-decoration: none;
+        padding: .5rem .8rem .5rem 0;
+        display: inline-block;
+        position: relative;
+        color: #8898aa;
+        &:hover{
+          color: black;
+        }
+      }
     }
   }
   img{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
-  ul {
-    padding: 0;
-      li {
-      display: inline-block;
-      margin: auto 1rem;
-      text-align: left;
-      list-style: none;
-    }
-  }
-  .icons{
-    margin: 3rem;
-    h3{
-      margin-bottom: 0;
-    }
-    a{
-      text-decoration: none;
-      color: white;
-    }
-    i{
-      font-size: 24px;
-    }
-    a.facebook:hover{
-      color: #3b5999;
-    }
-    .twitter:hover{
-      color:#55acee;
-    }
-    .linkedin:hover{
-      color: #0077B5;
-    }
-    .dribble:hover{
-      color: #ea4c89;
-    }
-    .github:hover{
-      color: #131418;
-    }
-  }
   p{
-    text-align: center;
-    font-size: 14px;
-    color: #D9DCE3 ;
-    opacity: 0.4;
+    a{
+      color:#db2645;
+      text-decoration: none;
+      .blink {
+        animation: blinker 1s linear infinite;
+      }
+
+    }
+  }
+  p.last{
+    margin: 0;
+    font-size: .85rem;
+    color: #8898aa;
   }
 }
 
+@keyframes blinker {
+  50% { opacity: 0; }
+}
 
 // page is under
 .construction{
@@ -346,98 +461,230 @@ footer{
 
 
 // home.html starts from here
-/*partial/home.html section1 css starts from here*/
 #section1{
   height: 100vh;
   max-height: 500px;
-  @media screen and (max-width: $sm-break) {
-    background: url('../images/bg.png');
-  }
-  .img-carousel {
-    height: 100%;
-    ul {
-      height: 100%;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      overflow: hidden;
-      li {
-        display: inline;
-        width: 100%;
-        overflow: hidden;
-        img {
-         vertical-align: top;
-         position: absolute;
-         top: 0;
-         width: 100%;
-         height: auto;
-       }
-      }
-    }
-  }
-}
-.text-over-img{
-  overflow: hidden;
+  color: white;
+  font-size: 14px;
   position: relative;
-  top: -100%;
-  height: 100%;
-  margin: 0;
-  font-family: $varela;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  background: rgba(0,0,0,0.62);
-  color:#f2f2f2;
-  @media screen and (max-width: $sm-break) {
-    top: 0;
-    background: none;
+  overflow: hidden;
+  background: linear-gradient(120deg, #e671a5 00%, #ffcfa9 70%);
+  background: -moz-linear-gradient(120deg, #e671a5 00%, #ffcfa9 70%);
+  background: -webkit-gradient(120deg, #e671a5 00%, #ffcfa9 70%);
+  font-family: $montserrat;
+  div{
+    height: 100%;
   }
-  h2{
-    font-size: 3.5rem;
-    font-family: $montserrat;
-    margin-bottom: 0;
-    @media screen and (max-width: $sm-break) {
-      color: $astronaut;
+  .img-wrapper{
+    height: 300px;
+    width: 500px;
+    box-shadow: 1px 1px 43px 15px rgba(0,0,0,.17);
+    border-radius: 20px;
+    background: white;
+    ul{
+      border-radius: 14px;
     }
+    img{
+      height: auto;
+      width: 100%;
+    }
+  }
+  h1{
+    font-size: 4rem;
   }
   h4{
-    font-size: 1.7rem;
-    font-weight: 400;
-    @media screen and (max-width: $sm-break) {
-      color: $brightgrey;
-      text-align: center;
-    }
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .custom-btn{
+    margin: 2rem .6rem;
+    padding: .3rem 3rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: black;
+    background: white;
+  }
+  .header{
+    z-index: 10;
   }
 }
 
-// I have no idea why I wrote these lines or did I ctrl+C ctrl+V like
-// this whole fu***ing project *thinking intensifies*
-
-.carousel-img{
-  width:100%;
-  height: 100vh;
-  max-height: 700px;
+.bg-overlay-1, .bg-overlay-2{
+  position: absolute;
+  h1{
+    font-size: 12rem !important;
+    color: rgba(0, 0, 0, 0.05);
+    display: block;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    line-height: 1;
+    @media screen and (max-width: $xs-break) {
+      font-size: 8rem !important;
+    }
+    // @media screen and (max-width: $sm-break) {
+    //   font-size: 8rem !important;
+    // }
+  }
 }
-
-
-.section2{
-  height: 100vh;
-  max-height: 400px;
-  .text-wrapper{
+.bg-overlay-1{
+  top: 20px;
+  left: 100px;
+}
+.bg-overlay-2{
+  top: -100px;
+  right: -100px;
+}
+.section2, .section3, .section4, .section5, .section6{
+  overflow: hidden;
+  padding: 3rem 0;
+  .container{
     height: 100%;
-    width: 100%;
+    position: relative;
     p{
-      font-size: 20px;
+      font-size: 1.2rem;
       line-height: 30px;
       color: #535863;
       font-weight: 300;
       text-align: center;
       max-width: 800px;
-      font-family: $open-sans;
+    }
+    &:after {
+      font-size: 12rem;
+      color: rgba(0, 0, 0, 0.05);
+      content: attr(data-bg-text);
+      display: block;
+      font-weight: 600;
+      overflow-wrap: break-word;
+      line-height: 1;
+      position: absolute;
+      max-width: 800px;
+      top: -20px;
+      right: -200px;
+      @media screen and (max-width: $xs-break) {
+        font-size: 6rem !important;
+      }
     }
   }
 }
+.section3{
+  max-height: auto;
+  .container{
+    &:after {
+      max-width: 600px;
+      top: 100px;
+      left: -100px;
+    }
+  }
+}
+.work-section{
+  max-width: 1200px;
+  img{
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+  }
+  p{
+    text-align: left;
+    font-size: 1rem !important;
+    line-height: 27px !important;
+  }
+  h3{
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  a{
+    font-size: 1rem;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}
 
+.section4{
+  background: #f4f6fa;
+  .container{
+    &:after {
+      top: 100px;
+      right: -500px;
+    }
+  }
+}
+.section4{
+  .container{
+    div{
+      width: 100%;
+      z-index: 10;
+    }
+    .custom-btn{
+      margin-top: 2rem;
+    }
+  }
+  .ngo-imgs{
+    width: 100%;
+    max-width: 1200px;
+    padding: 3rem 0;
+    a{
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      img{
+        height: auto;
+        width: 80px;
+        margin:1rem 2rem;
+        &:nth-child(1){
+        }
+      }
+      &:hover{
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+      }
+    }
+    h3{
+      margin-bottom: 0;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    p{
+      text-align: left;
+    }
+  }
+}
+.ngo--hover{
+  -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%) !important;
+}
+
+.section5{
+  max-height: auto;
+  .container{
+    &:after {
+      top: 50px;
+      left: -200px;
+    }
+  }
+}
+h1.head{
+  font-size: 2.7rem;
+}
+
+.section6{
+  background: linear-gradient(120deg, #e671a5 00%, #ffcfa9 70%);
+  background: -moz-linear-gradient(120deg, #e671a5 00%, #ffcfa9 70%);
+  background: -webkit-gradient(120deg, #e671a5 00%, #ffcfa9 70%);
+
+  .icon-wrapper{
+    padding: 1rem;
+    a{
+      margin: auto 4px;
+    }
+  }
+  h2{
+        color: #36434d;
+  }
+  .fb img{
+    position: relative;
+    top: 7px;
+  }
+}
 // aboutus.html starts from here
 .cust-container {
    height: auto;
@@ -516,7 +763,7 @@ footer{
          font-size: 1rem;
        }
        p{
-         font-family: $varela;
+         font-family: $montserrat;
          color: #576366;
          font-size: 1rem;
           font-weight: 400;
@@ -526,61 +773,23 @@ footer{
    }
 }
 
-.section3{
-  height: 400px;
-  width: 100%;
-  div{
-    height: 100%;
-  }
-  background: #D9ECE7;
-  h3{
-    color: #34383a;
-    font-size: 1.7rem;
-    font-weight: 500;
-    max-width:700px;
-    text-align: center;
-  }
-  a{
-    white-space: nowrap;
-    margin: 3rem auto;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 14px;
-    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-    background: #fff;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .025em;
-    color: #6772e5;
-    text-decoration: none;
-    transition: all .15s ease;
-    color: #fff;
-    background: #6772e5;
-  }
-}
-
 .custom-btn{
   white-space: nowrap;
   margin: 1rem auto;
   display: inline-block;
-  height: 40px;
   line-height: 40px;
-  padding: 0 14px;
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-  background: #fff;
-  border-radius: 4px;
-  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .025em;
-  color: #6772e5;
   text-decoration: none;
   transition: all .15s ease;
-  color: #fff;
-  background: #6772e5;
+  background: #6c63ff;
+  margin: 2rem .6rem;
+  padding: .3rem 3rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: white;
 }
 //
 // .section4{
@@ -593,31 +802,62 @@ footer{
     margin-top: 3rem;
   }
   .md-headline{
-    color: #4D4E52;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
-    font-family: $varela;
   }
   i{
     font-size: 24px;
   }
+  md-card{
+    cursor: pointer;
+    @include transition(all 0.3s ease-in-out);
+    &:hover{
+      @include transition(all 0.3s ease-in-out);
+      box-shadow: 1px 20px 29px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
-.internship, .policy{
+.internship, .policy, .hours{
+  max-width: 1100px;
+  margin: auto;
+  font-size: 14px;
   h1{
     text-align: center;
     font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  .custom-btn{
+    margin: 1rem 0;
+    font-size: 12px;
+    padding: .1rem 1rem;
   }
   .text-wrapper{
     width: 100%;
   }
-  font-family: $varela;
-  color: #576366;
-  font-size: 1rem;
+  .container{
+    position: relative;
+  }
+  line-height: 24px;
+  color: #535863;
   font-weight: 400;
-  line-height: 1.5;
+  &:after {
+    font-size: 12rem;
+    color: rgba(0, 0, 0, 0.05);
+    content: attr(data-bg-text);
+    display: block;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    right: -200px;
+  }
+  ul{
+    padding-left: 1rem !important;
+  }
 }
 
 
@@ -626,40 +866,41 @@ footer{
 // ngo.details.html starts from here
 .ngo-details, .member-details{
   height: 70%;
-  width: 600px;
+  width: 90%;
+  max-width: 700px;
+  padding: 2rem;
   @media screen and (max-width: $md-break) {
     width:90%;
     margin: auto;
-    height: 80%
+    height: 80%;
+    padding: 1rem;
   }
   background: white;
   .text-wrapper{
-    padding: 16px;
     color: #576366;
-    font-size: 1rem;
-    font-weight: 400;
     line-height: 1.5;
-    font-family: $varela;
+  }
+  .info{
+    line-height: 24px;
   }
   p{
-    font-family: $varela;
     color: #576366;
     font-size: 1rem;
      font-weight: 400;
      line-height: 1.5;
   }
   h3{
-    margin:0 auto 10px;
-    text-align: left;
-  }
-  i{
-    margin-right: 20px;
-    font-size: 24px;
+    margin:1rem auto;
+    font-weight: 600;
   }
   .bottom{
     padding: 16px;
-    background: #EEE;
+    background: linear-gradient(120deg, #e671a5 0%, #ffcfa9 70%);
     margin-top: 8px;
+    span{
+      font-size: 1rem;
+      font-weight: 500;
+    }
   }
   ul {
     padding: 0;
@@ -672,6 +913,12 @@ footer{
       text-align: left;
       list-style-type:circle;
     }
+  }
+  a.custom-btn{
+    margin: 1rem auto;
+    float: right;
+    padding: 0 2rem;
+    border-radius: 4px;
   }
 }
 
@@ -691,15 +938,15 @@ footer{
   h1{
     text-align: center;
     font-size: 2.4rem;
-    font-family:$varela;
+    font-family:$montserrat;
   }
   p{
-    font-family:$varela;
+    font-family:$montserrat;
     max-width: 900px;
-    color: #576366;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 27px;
+    color: #535863;
     font-weight: 400;
-    line-height: 1.5;
   }
   .btn-wrapper{
     .custom-btn{
@@ -714,7 +961,6 @@ footer{
 // this is direct copy from openhouse
 
 .team-section{
-  max-height: 1930px;
   .member-wrap{
     img{
       height:100px;
@@ -723,14 +969,14 @@ footer{
     }
   }
   h2{
-    font-size: 3rem;
     text-align: center;
+    font-size: 2.4rem;
   }
 }
 
 .team-section{
   $prefix: at;
-  $totalColumns: 9;
+  $totalColumns: 12;
   // Custom Prefix
   .#{$prefix} {
 
@@ -739,11 +985,10 @@ footer{
       &__title {
         margin: 70px auto;
         color: #000;
-        font-family: $varela;
+        font-family: $montserrat;
         color: $tundora;
-        font-size: 2.3rem;
-        font-weight: 300;
-        line-height: 2.625rem;
+        font-size: 1.2rem;
+        font-weight: 500;
         text-align: center;
       }
     }
@@ -821,8 +1066,8 @@ footer{
       text-align: center;
 
       &__avatar {
-        width: 98px;
-        height: 98px;
+        width: 80px;
+        height: 80px;
         border-radius: 100%;
         margin: 0 auto 20px;
         overflow: hidden;
@@ -837,9 +1082,8 @@ footer{
       &__name {
         color: #313435;
         font-family: $montserrat;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: 500;
-        line-height: 2.625rem;
       }
 
       &__title {
@@ -859,27 +1103,7 @@ footer{
       &__item {
         display: inline-block;
         margin: 0 10px;
-
-        a {
-          display: block;
-          color: $aluminium;
-          font-family: $pt-sans;
-          text-decoration: none;
-          i{
-            font-size: 20px;
-          }
-        }
-
-        svg {
-          fill: #515F65;
-          display: block;
-          height: 18px;
-          transition: fill 0.2s ease;
-
-          &:hover {
-            fill: #788D96;
-          }
-        }
+        font-size: .8rem;
       }
     }
   }
@@ -889,14 +1113,15 @@ footer{
     padding: 0 20px;
     box-sizing: border-box;
     transform-origin: top center;
-    transform: scale(0.8);
   }
 }
 
 
 // about.faq starts from here
-.about.faq, .hours.complaint{
+.about.faq{
   padding-bottom: 100px;
+  font-family: $montserrat;
+
   h1{
     text-align: center;
     font-size: 2.4rem;
@@ -907,15 +1132,22 @@ footer{
     font-size: 1.05rem;
   }
   div{
-    font-family:$varela;
     color: #576366;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 24px;
+    color: #535863;
     font-weight: 400;
-    line-height: 1.5;
   }
   .subheader{
     // font-size:
     text-align: center;
+  }
+  .custom-btn{
+    max-width:90px;
+    margin: 0;
+  }
+  ul{
+      padding-left: 1rem !important;
   }
 }
 .md-accordion{
@@ -987,4 +1219,50 @@ footer{
     padding: 16px;
     border-bottom:1px solid #D4D4D4;
   }
+}
+.subscribe{
+  input{
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    background: #1d1f21;
+    box-shadow: 1px 1px 43px 15px rgba(0, 0, 0, 0.1);
+    padding: 0 30px;
+    border-radius: 60px;
+    border: 1px solid #6c63ff;
+    border: none;
+    height: 50px;
+    background: #ffffff;
+    min-width: 300px;
+  }
+  .custom-btn{
+    margin: 0 auto;
+    position: relative;
+    left: -50px;
+    top: 15px;
+    z-index: 30;
+    height: 46px;
+  }
+  md-input-container{
+    background: white;
+box-shadow: 1px 1px 43px 15px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+padding: 8px 30px;
+width: 200px;
+z-index: 20;
+  }
+  md-input-container.md-input-focused label:not(.md-no-float), md-input-container.md-input-has-placeholder label:not(.md-no-float), md-input-container.md-input-has-value label:not(.md-no-float) {
+    display: none;}
+    md-select.md-default-theme .md-select-value, md-select .md-select-value{
+
+      border: none;
+    }
+    md-select.md-default-theme .md-select-value, md-select .md-select-value{
+
+    }
+    md-select:not([disabled]).ng-invalid.ng-touched .md-select-value{
+      border: none;
+    }
+    md-select.md-default-theme:not([disabled]):focus .md-select-value, md-select:not([disabled]):focus .md-select-value{
+      border: none;
+    }
 }

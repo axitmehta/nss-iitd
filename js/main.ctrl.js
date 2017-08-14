@@ -1,7 +1,9 @@
-app.controller('MainCtrl', function($scope, $location, $mdDialog, $mdToast, $rootScope, $routeParams, $http, $window, $log, $document, $mdSidenav, $timeout) {
+app.controller('MainCtrl', function($scope, $location, $rootScope, $mdDialog, $window,  $mdSidenav, $timeout) {
   $scope.toggleLeft = buildToggler('left');
   $scope.toggleRight = buildToggler('right');
-
+  $rootScope.isPath= function(viewLocation) {
+    return viewLocation === $location.path();
+  };
   function buildToggler(componentId) {
     return function() {
       $mdSidenav(componentId).toggle();
@@ -9,7 +11,12 @@ app.controller('MainCtrl', function($scope, $location, $mdDialog, $mdToast, $roo
   }
   $timeout(function() {
     $rootScope.loadingComp=true;
-  }, 2000);
+  }, 0);
+  $scope.subscribe = function (user) {
+      $window.location.href= ('https://groups.google.com/group/'+user.type+'/boxsubscribe');
+  };
+
+  // caraousel Images starts from here
   $scope.carouselImages= [
        {
             "Name" : "Artists performing in Rendezvous 2017",
@@ -25,6 +32,9 @@ app.controller('MainCtrl', function($scope, $location, $mdDialog, $mdToast, $roo
             "img" : "images/image4.jpg"
         }
     ];
+
+
+    // FAQ's starts form here
   $scope.accordianData = [
         {
             "question" : "What is NSS IIT Delhi all about?",
@@ -91,5 +101,4 @@ app.controller('MainCtrl', function($scope, $location, $mdDialog, $mdToast, $roo
        }
        data.expanded = !data.expanded;
     };
-
 });
